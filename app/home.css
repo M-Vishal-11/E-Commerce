@@ -1,0 +1,37 @@
+@import "tailwindcss";
+body {
+  /* background-color: #cccccc; */
+  /* background-image: linear-gradient(rgb(33, 193, 221), rgb(2, 68, 155)); */
+  margin: 0;
+}
+h1 {
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.Box {
+  background-color: #ffffff;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-right: 8px;
+  margin-left: 16px;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
+}
+
+p {
+  font-size: 16px;
+  padding: 0 8px;
+}
+.Row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  max-width: 1100px;
+  background-color: #dcebff;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
+}
