@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function Card() {
   return (
-    <div className="Box hover:scale-105 cursor-pointer">
+    <div className=" mb-4 hover:scale-105 cursor-pointer bg-white inline-block border p-2 border-black rounded-md mr-2 ml-4 shadow-[8px_8px_8px_rgba(0,0,0,0.3)]">
       <h1 className="Card-box text-3xl" style={{ fontSize: 24 }}>
         Title
       </h1>
