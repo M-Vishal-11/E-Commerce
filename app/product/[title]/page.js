@@ -53,6 +53,14 @@ const ProductPage = async ({ params }) => {
           </div>
         </div>
       </div>
+      <div className="flex flex-col justify-center">
+        <textarea
+          className="border-2 mt-20 bg-white w-200 m-auto"
+          cols={60}
+          rows={3}
+          placeholder="Commets"
+        ></textarea>
+      </div>
       <Footer />
     </div>
   );
