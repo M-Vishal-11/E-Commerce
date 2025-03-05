@@ -15,16 +15,16 @@ function Header() {
         <nav>
           <ul>
             <li>
-              <a href="">Cart</a>
+              <a href="/cart">Cart</a>
             </li>
             <li>
-              <a href="">Categories</a>
+              <a href="/categories">Categories</a>
             </li>
             <li>
-              <a href="">About</a>
+              <a href="/">About</a>
             </li>
             <li>
-              <a href="">Home</a>
+              <a href="/">Home</a>
             </li>
           </ul>
         </nav>

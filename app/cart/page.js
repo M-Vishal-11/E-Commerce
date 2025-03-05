@@ -13,7 +13,7 @@ const CartCard = () => {
             width={240}
             height={200}
             className="ml-2 "
-            alt=""
+            alt="image"
           />
         </div>
         <div className="ml-16 flex flex-col w-125">
@@ -25,9 +25,9 @@ const CartCard = () => {
             ojdfj djf ;l kldsjf;l sd
           </p>
           <div className="border-2 rounded-4xl w-40 h-10 flex flex-row justify-between items-center">
-            <Image src="/assets/bin.png" width={50} height={50} />
+            <Image src="/assets/bin.png" width={50} height={50} alt="Bin" />
             <h1 className="w-10 text-center text-2xl pr-1.5">11</h1>
-            <Image src="/assets/plus.png" width={35} height={35} />
+            <Image src="/assets/plus.png" width={35} height={35} alt="Add" />
           </div>
           <p className="mt-12 text-12 text-stone-600">Delete</p>
         </div>
