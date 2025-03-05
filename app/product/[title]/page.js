@@ -29,7 +29,7 @@ const ProductPage = async ({ params }) => {
   return (
     <div className="bg-linear-to-r from-cyan-500 to-blue-500">
       <Header />
-      <div className="flex flex-row gap-10 justify-between">
+      <div className="flex flex-row gap-10 justify-between ml-3 mr-3">
         <Photo alt={title} />
         <div className="w-140 bg-blue-100 p-4 rounded-md">
           <h1 className="text-4xl">
@@ -44,7 +44,7 @@ const ProductPage = async ({ params }) => {
             <Button text="Buy now" />
           </div>
         </div>
-        <div className="rounded-md w-80 mr-3 bg-blue-100">
+        <div className="rounded-md w-80 bg-blue-100">
           <p className="text-3xl m-3">$1000</p>
           <Qnty />
           <div className="flex flex-col justify-center items-center">
