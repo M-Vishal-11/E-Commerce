@@ -12,6 +12,7 @@ function Card() {
         height={240}
         alt="ecommerce"
         className="m-auto"
+        priority
       />
       <div>
         <h1 className="Card-box">Description</h1>

@@ -2,6 +2,7 @@ import Header from "@/app/Header";
 import Photo from "./photo";
 import Footer from "@/app/Footer";
 import Image from "next/image";
+import Comments from "./comments";
 
 function Button(props) {
   return (
@@ -16,9 +17,9 @@ function Button(props) {
 function Qnty() {
   return (
     <div className="border-2 rounded-4xl w-40 h-10 flex flex-row justify-between items-center mt-10 m-auto">
-      <Image src="/assets/bin.png" width={50} height={50} alt="Bin" />
+      <Image src="/assets/bin.png" width={50} height={50} alt="Bin" priority />
       <h1 className="w-10 text-center text-2xl pr-1.5">11</h1>
-      <Image src="/assets/plus.png" width={35} height={35} alt="Add" />
+      <Image src="/assets/plus.png" width={35} height={35} alt="Add" priority />
     </div>
   );
 }
@@ -53,14 +54,7 @@ const ProductPage = async ({ params }) => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center">
-        <textarea
-          className="border-2 mt-20 bg-white w-200 m-auto"
-          cols={60}
-          rows={3}
-          placeholder="Commets"
-        ></textarea>
-      </div>
+      <Comments />
       <Footer />
     </div>
   );
