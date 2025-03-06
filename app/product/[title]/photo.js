@@ -8,6 +8,7 @@ const Photo = ({ alt }) => {
       width={500}
       alt={alt}
       className="rounded-sm"
+      priority
     />
   );
 };

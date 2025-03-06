@@ -10,7 +10,6 @@ const page = () => {
       <Header />
       <div className="gap-16 m-3 bg-white">
         <CatDrop />
-        <CatDrop />
       </div>
       <Footer />
     </div>
