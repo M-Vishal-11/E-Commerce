@@ -12,7 +12,7 @@ function Comments() {
       <hr className="w-200 mt-5 m-auto" />
       <div className="mt-10 border-2 m-auto w-200 bg-blue-200 p-3">
         <h1 className="text-lg text-neutral-900 underline underline-offset-5 font-bold">
-          Person's Name
+          Person&apos;s Name
         </h1>
         <p className="text-md mt-5">This is one of the great stuff</p>
         <button className="mt-5 border-2 rounded-md w-18 text-lg font-bold bg-amber-300">
