@@ -1,31 +1,34 @@
+"use client";
 import Header from "@/app/Header";
 import Photo from "./photo";
 import Footer from "@/app/Footer";
-import Image from "next/image";
 import Comments from "./comments";
+import { Qnty } from "./Qnty";
+import { useState } from "react";
+import { use } from "react";
 
 function Button(props) {
   return (
     <>
-      <button className="mt-15 border-2 rounded-md w-60 h-13 text-[23px] bg-amber-300">
+      <button className="mt-15 border-2 rounded-md w-60 h-13 text-[23px] bg-amber-300 hover:scale-110">
         {props.text}
       </button>
     </>
   );
 }
 
-function Qnty() {
-  return (
-    <div className="border-2 rounded-4xl w-40 h-10 flex flex-row justify-between items-center mt-10 m-auto">
-      <Image src="/assets/bin.png" width={50} height={50} alt="Bin" priority />
-      <h1 className="w-10 text-center text-2xl pr-1.5">11</h1>
-      <Image src="/assets/plus.png" width={35} height={35} alt="Add" priority />
-    </div>
-  );
-}
+const ProductPage = ({ params, searchParams }) => {
+  const { title } = use(params);
+  const productTitle = decodeURIComponent(title);
+  const { description, price } = use(searchParams);
 
-const ProductPage = async ({ params }) => {
-  const { title } = await params;
+  const [qnty, setQnty] = useState({});
+  function updateQnty(id, val) {
+    setQnty((prev) => ({
+      ...prev,
+      [id]: Math.max(val, 0),
+    }));
+  }
 
   return (
     <div className="bg-linear-to-r from-cyan-500 to-blue-500">
@@ -33,21 +36,19 @@ const ProductPage = async ({ params }) => {
       <div className="flex flex-row gap-10 justify-between ml-3 mr-3">
         <Photo alt={title} />
         <div className="w-140 bg-blue-100 p-4 rounded-md">
-          <h1 className="text-4xl">
-            The great radio of all time ald dkflsjd kdj fkjd f kdfj{" "}
-          </h1>
-          <p className="mt-10">the great product of the world</p>
+          <h1 className="text-4xl">{productTitle}</h1>
+          <p className="mt-10">{description}</p>
           <hr className="mt-4 border border-stone-500 opacity-40" />
-          <h2 className="text-3xl mt-8 ml-2">$1000</h2>
-          <Qnty />
+          <h2 className="text-3xl mt-8 ml-2">{price}</h2>
+          <Qnty id="1" qnty={qnty["1"] || 0} updateQnty={updateQnty} />
           <div className="flex w-full justify-evenly">
             <Button text="Add to Cart" />
             <Button text="Buy now" />
           </div>
         </div>
         <div className="rounded-md w-80 bg-blue-100">
-          <p className="text-3xl m-3">$1000</p>
-          <Qnty />
+          <p className="text-3xl m-3">{price}</p>
+          <Qnty id="1" qnty={qnty["1"] || 0} updateQnty={updateQnty} />
           <div className="flex flex-col justify-center items-center">
             <Button text="Add to Cart" />
             <Button text="Buy now" />
